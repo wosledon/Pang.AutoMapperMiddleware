@@ -4,6 +4,7 @@
     <TargetFrameworks>netstandard2.1;netstandard2.1</TargetFrameworks>
     <Nullable>enable</Nullable>
 	  <LangVersion>latest</LangVersion>
+	  <PackageProjectUrl>https://github.com/DonPangPang/Pang.AutoMapperMiddleware</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
