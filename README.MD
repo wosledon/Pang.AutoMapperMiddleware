@@ -1,14 +1,14 @@
 # Pang.AutoMapperMiddleware
 
-¿ÉÒÔ·Ç³£¼ò½àµÄÊ¹ÓÃAutomapper
+å¯ä»¥éå¸¸ç®€æ´çš„ä½¿ç”¨Automapper
 
-## ÓÃ·¨
+## ç”¨æ³•
 
-### 1. ÒıÈë
+### 1. å¼•å…¥
 
-1. °´ÕÕÕı³£·½Ê½ÔÚ`service`ÖĞ×¢ÈëAutoMapper
+1. æŒ‰ç…§æ­£å¸¸æ–¹å¼åœ¨`service`ä¸­æ³¨å…¥AutoMapper
 
-2. °´ÕÕÏÂ·½·½Ê½ÒıÈëÖĞ¼ä¼ş
+2. æŒ‰ç…§ä¸‹æ–¹æ–¹å¼å¼•å…¥ä¸­é—´ä»¶
 
 ```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -23,7 +23,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     }
     app.UseStaticFiles();
     
-    //ÒıÈëÖĞ¼ä¼ş
+    //å¼•å…¥ä¸­é—´ä»¶
     app.UseAutoMapperMiddleware();
 
     app.UseRouting();
@@ -36,15 +36,15 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-3. Ê¹ÓÃ·½·¨
+3. ä½¿ç”¨æ–¹æ³•
 
 ```csharp
 var res = entity.MapTo<dto>();
 ```
 
-4. ÍÆ¼öAutoMapperÓÃ·¨
+4. æ¨èAutoMapperç”¨æ³•
 
-²»Ê¹ÓÃ`Profile`µÄ·½Ê½£¬²ÉÓÃ`Attribute`.
+ä¸ä½¿ç”¨`Profile`çš„æ–¹å¼ï¼Œé‡‡ç”¨`Attribute`.
 
 ```csharp
 [AutoMap(typeof(TestUser2), ReverseMap = true)]
@@ -67,7 +67,6 @@ public class UserDto
 ```
 
 ```csharp
-[AutoMap(typeof(UserDto), ReverseMap = true)]
 public class TestUser2: EntityBase
 {
     public Guid Id { get; set; }
