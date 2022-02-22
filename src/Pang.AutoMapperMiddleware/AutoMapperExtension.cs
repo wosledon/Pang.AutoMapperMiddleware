@@ -61,4 +61,15 @@ public static class AutoMapperExtension
     {
         return Mapper.Map<IEnumerable<T>>(obj);
     }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="obj"></param>
+    /// <param name="dest"></param>
+    public static void Map<T>(this object obj, T dest)
+    {
+        Mapper.Map(obj, dest);
+    }
 }
